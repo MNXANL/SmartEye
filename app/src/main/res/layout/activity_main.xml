@@ -1,0 +1,112 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/surfaceView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true" />
+
+            <ZoomControls
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zoomControls"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mid"
+                    android:src="@drawable/center"
+                    android:layout_marginStart="245dp"
+                    android:layout_marginTop="145dp"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CrossHair"
+                    android:src="@drawable/sights1"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="↑"
+                    android:id="@+id/UpArr"
+                    android:textStyle="bold"
+                    android:layout_above="@+id/LeftArr"
+                    android:layout_toStartOf="@+id/RightArr" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="←"
+                    android:id="@+id/LeftArr"
+                    android:layout_gravity="left|bottom"
+                    android:textStyle="bold"
+                    android:layout_alignTop="@+id/DownArr"
+                    android:layout_toStartOf="@+id/UpArr" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="↓"
+                    android:id="@+id/DownArr"
+                    android:layout_gravity="left|bottom"
+                    android:textStyle="bold"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/LeftArr" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:id="@+id/RightArr"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/UpArr"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zzz"
+                    android:id="@+id/LightEm"
+                    android:layout_above="@+id/LeftArr"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
